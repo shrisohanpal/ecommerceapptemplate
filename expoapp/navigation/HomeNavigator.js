@@ -25,7 +25,7 @@ export default function App({ navigation }) {
                 name="Home"
                 component={HomeScreen}
                 options={{
-                    title: 'Kalpvriksh',
+                    title: 'App Template',
                     headerLeft: () => (
                         <FontAwesome name="bars" size={25} color='#ffffff' style={{ margin: 10 }} onPress={() => navigation.openDrawer()} />
                     ),

@@ -15,9 +15,9 @@ const LoginScreen = ({ navigation }) => {
   const userLogin = useSelector((state) => state.userLogin)
   const { loading, error, userInfo } = userLogin
 
-  const userForgotPassword = useSelector((state) => state.userForgotPassword)
-  const { success } = userForgotPassword
-
+  // const userForgotPassword = useSelector((state) => state.userForgotPassword)
+  // const { success } = userForgotPassword
+  const success = true
   const submitHandler = () => {
     //dispatch(login(email, password))
     dispatch(login('admin@example.com', '123456'))

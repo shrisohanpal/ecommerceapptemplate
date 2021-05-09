@@ -1,5 +1,5 @@
 {
-  "name": "ishmishdreams",
+  "name": "apptemplate",
   "version": "1.0.0",
   "description": "MERN E-commerce Project",
   "main": "server.js",
@@ -8,7 +8,10 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
+    "frontapp": "node backend/frontapp",
+    "expoapp": "npm start --prefix expoapp",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "app": "concurrently \"npm run server\" \"npm run expoapp\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"

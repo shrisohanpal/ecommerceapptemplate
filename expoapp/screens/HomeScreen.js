@@ -63,24 +63,10 @@ const HomeScreen = ({ navigation }) => {
 
                 <Image source={require('../assets/banners/ba.jpg')} style={styles.banner} fluid />
 
-                <Text style={styles.text}>Featured Shops</Text>
-                {loadingShops ? <ActivityIndicator size="large" color={Colors.primary} />
-                    : errorShops
-                        ? (<Message data={errorShops} />)
-                        : (
-                            <FlatList
-                                keyExtractor={(item, index) => item._id}
-                                data={shops}
-                                renderItem={({ item }) => <Shop shop={item} navigation={navigation} />}
-                                showsHorizontalScrollIndicator={false}
-                                horizontal={true}
-                            />
-                        )
-                }
 
                 <Image source={require('../assets/banners/bb.jpg')} style={styles.banner} fluid />
 
-                <Text style={styles.text}>Featured Products</Text>
+                <Text style={styles.text}>New Products</Text>
                 {loadingProducts ? <ActivityIndicator size="large" color={Colors.primary} />
                     : errorProducts
                         ? (<Message data={errorProducts} />)
