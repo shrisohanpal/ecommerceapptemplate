@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { ScrollView, View, TextInput, CheckBox, Button, Text, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native'
 import Message from '../components/Message'
 import { login } from '../actions/userActions'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+import Colors from '../constants/Colors'
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('')
@@ -15,9 +15,9 @@ const LoginScreen = ({ navigation }) => {
   const userLogin = useSelector((state) => state.userLogin)
   const { loading, error, userInfo } = userLogin
 
-  // const userForgotPassword = useSelector((state) => state.userForgotPassword)
-  // const { success } = userForgotPassword
-  const success = true
+  const userForgotPassword = useSelector((state) => state.userForgotPassword)
+  const { success } = userForgotPassword
+
   const submitHandler = () => {
     //dispatch(login(email, password))
     dispatch(login('admin@example.com', '123456'))
@@ -89,11 +89,12 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 18,
-    borderWidth: 1,
-    backgroundColor: 1,
-    padding: 10,
+    borderBottomColor: '#ccc',
+    borderBottomWidth: 1,
+    marginBottom: 15,
+    paddingVertical: 4,
+    paddingHorizontal: 2,
     marginVertical: 10,
-    borderRadius: 5
   },
   checkBoxContainer: {
     flexDirection: 'row'

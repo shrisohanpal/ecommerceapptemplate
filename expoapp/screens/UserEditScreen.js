@@ -12,7 +12,6 @@ const UserEditScreen = ({ route, navigation }) => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [isVendor, setIsVendor] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
 
     const dispatch = useDispatch()
@@ -37,7 +36,6 @@ const UserEditScreen = ({ route, navigation }) => {
             } else {
                 setName(user.name)
                 setEmail(user.email)
-                setIsVendor(user.isVendor)
                 setIsAdmin(user.isAdmin)
             }
         }
@@ -45,7 +43,7 @@ const UserEditScreen = ({ route, navigation }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(updateUser({ _id: userId, name, email, isVendor, isAdmin }))
+        dispatch(updateUser({ _id: userId, name, email, isAdmin }))
     }
 
     const deleteHandler = () => {
@@ -75,13 +73,6 @@ const UserEditScreen = ({ route, navigation }) => {
                                     onChangeText={setEmail}
                                     value={email}
                                 />
-                                <View style={styles.checkBoxContainer}>
-                                    <CheckBox value={isVendor}
-                                        onValueChange={setIsVendor}
-                                        style={styles.checkbox}
-                                    />
-                                    <Text style={{ fontSize: 18 }}>Is Vendor</Text>
-                                </View>
                                 <View style={styles.checkBoxContainer}>
                                     <CheckBox value={isAdmin}
                                         onValueChange={setIsAdmin}
@@ -114,10 +105,11 @@ const UserEditScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
     userContainer: {
         flex: 1,
-        padding: 10
+        padding: 1
     },
     card: {
-        padding: 10
+        padding: 10,
+        margin: 10,
     },
     label: {
         fontSize: 18,

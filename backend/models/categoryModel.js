@@ -5,10 +5,16 @@ const categorySchema = mongoose.Schema(
         name: {
             type: String
         },
-        subCategorys: {
-            type: [String],
-            default: ['DSC1', 'DSC2']
-        }
+        image: {
+            type: String
+        },
+        products: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                required: true,
+                ref: 'Product'
+            }
+        ]
     }, {
     timestamps: true
 })

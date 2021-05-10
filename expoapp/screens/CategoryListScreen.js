@@ -13,7 +13,7 @@ const Category = ({ category, navigation }) => {
             <TouchableOpacity
                 onPress={() => navigation.navigate('CategoryEdit', { id: category._id, title: category.name })}
             >
-                <Text style={styles.text}>{category.name}</Text>
+                <Text style={styles.text}>{category.name ? category.name : "No Name"}</Text>
             </TouchableOpacity>
         </Card>
     )

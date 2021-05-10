@@ -4,8 +4,7 @@ import Category from '../models/categoryModel.js'
 // @desc    Fetch all category
 // @route   GET /api/categorys
 // @access  Private admin
-const getCategorys = asyncHandler(async (req, res) =>
-{
+const getCategorys = asyncHandler(async (req, res) => {
     const categorys = await Category.find()
     res.json({ categorys })
 })
@@ -13,8 +12,7 @@ const getCategorys = asyncHandler(async (req, res) =>
 // @desc    Fetch single category
 // @route   GET /api/categorys/:id
 // @access  Public
-const getCategoryById = asyncHandler(async (req, res) =>
-{
+const getCategoryById = asyncHandler(async (req, res) => {
     const category = await Category.findById(req.params.id)
 
     if (category) {
@@ -28,8 +26,7 @@ const getCategoryById = asyncHandler(async (req, res) =>
 // @desc    Delete a category
 // @route   DELETE /api/categorys/:id
 // @access  Private/Admin
-const deleteCategory = asyncHandler(async (req, res) =>
-{
+const deleteCategory = asyncHandler(async (req, res) => {
     const category = await Category.findById(req.params.id)
 
     if (category) {
@@ -44,11 +41,12 @@ const deleteCategory = asyncHandler(async (req, res) =>
 // @desc    Create a category
 // @route   POST /api/categorys
 // @access  Private/Admin
-const createCategory = asyncHandler(async (req, res) =>
-{
+const createCategory = asyncHandler(async (req, res) => {
     // console.log(req.user)
+    const { name } = req.body
     const category = new Category({
         user: req.user._id,
+        name
     })
 
     const createdCategory = await category.save()
@@ -58,9 +56,8 @@ const createCategory = asyncHandler(async (req, res) =>
 // @desc    Update a category
 // @route   PUT /api/categorys/:id
 // @access  Private/Admin
-const updateCategory = asyncHandler(async (req, res) =>
-{
-    console.log(req.params.id)
+const updateCategory = asyncHandler(async (req, res) => {
+    //console.log(req.params.id)
     const { name, subCategorys } = req.body
 
     const category = await Category.findById(req.params.id)
@@ -78,8 +75,7 @@ const updateCategory = asyncHandler(async (req, res) =>
 })
 
 
-export
-{
+export {
     getCategorys,
     getCategoryById,
     createCategory,

@@ -115,7 +115,7 @@ const ProfileScreen = ({ navigation }) => {
                 />
                 <View style={{ margin: 20 }} />
                 <Text style={styles.label}>Orders</Text>
-                {loadingOrders ? (
+                { /*loadingOrders ? (
                   <ActivityIndicator size="large" color={Colors.primary} />
                 ) : errorOrders ? (
                   <Message data={errorOrders} />
@@ -125,7 +125,7 @@ const ProfileScreen = ({ navigation }) => {
                     data={orders}
                     renderItem={({ item }) => <Order order={item} navigation={navigation} />}
                   />
-                )}
+                )*/}
               </View>
             </ScrollView>
           )

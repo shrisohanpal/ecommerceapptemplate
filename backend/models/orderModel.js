@@ -66,11 +66,6 @@ const orderSchema = mongoose.Schema(
         },
         deliveredAt: {
             type: Date
-        },
-        packing: {
-            type: Boolean,
-            required: true,
-            default: false
         }
     }, {
     timestamps: true

@@ -106,11 +106,12 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 18,
-    borderWidth: 1,
-    backgroundColor: 1,
-    padding: 10,
+    borderBottomColor: '#ccc',
+    borderBottomWidth: 1,
+    marginBottom: 15,
+    paddingVertical: 4,
+    paddingHorizontal: 2,
     marginVertical: 10,
-    borderRadius: 5
   },
   checkBoxContainer: {
     flexDirection: 'row'

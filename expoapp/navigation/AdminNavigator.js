@@ -28,26 +28,26 @@ const UsersNavigator = () => {
     )
 }
 
-const CategoriesNavigator = () => {
+const CategoriesNavigator = ({ navigation }) => {
     return (
         <Stack.Navigator
             screenOptions={{
                 headerTintColor: 'white',
                 headerStyle: { backgroundColor: '#007bff' }
             }}>
-            <Stack.Screen name="CategoryList" component={CategoryListScreen} />
+            <Stack.Screen
+                name="CategoryList"
+                component={CategoryListScreen}
+                options={{
+                    title: 'Categories',
+                    headerRight: () => (
+                        <View style={{ flexDirection: 'row' }}>
+                            <Ionicons name="ios-add" size={40} color='#ffffff' style={{ margin: 10 }} onPress={() => navigation.navigate('CategoryEdit')} />
+                        </View >
+                    )
+                }}
+            />
             <Stack.Screen name="CategoryEdit" component={CategoryEditScreen} />
-        </Stack.Navigator>
-    )
-}
-
-const ShopsNavigator = () => {
-    return (
-        <Stack.Navigator
-            screenOptions={{
-                headerTintColor: 'white',
-                headerStyle: { backgroundColor: '#007bff' }
-            }}>
         </Stack.Navigator>
     )
 }
@@ -110,7 +110,6 @@ export default function App() {
 
             <BottomTab.Screen name="Users" component={UsersNavigator} />
             <BottomTab.Screen name="Categories" component={CategoriesNavigator} />
-            <BottomTab.Screen name="Shops" component={ShopsNavigator} />
             <BottomTab.Screen name="Products" component={ProductsNavigator} />
             <BottomTab.Screen name="Orders" component={OrdersNavigator} />
 
