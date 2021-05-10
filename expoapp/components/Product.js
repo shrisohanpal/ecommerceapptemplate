@@ -5,8 +5,8 @@ import { baseUrl } from '../urls'
 
 const Product = ({ product, navigation }) => {
 
-    return (
-        <Card style={styles.product}></Card>)
+    /*    return (
+            <Card style={styles.product}></Card>)*/
     return (
         <Card style={styles.product}>
             <View style={styles.touchable}>

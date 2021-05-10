@@ -1,7 +1,7 @@
 const products = [
   {
     name: 'Sample 1',
-    image: ['/images/a.jpg', '/images/a.jpg'],
+    images: ['/uploads/a.jpg', '/uploads/a.jpg'],
     description:
       'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
     brand: 'Apple',
@@ -14,7 +14,7 @@ const products = [
   },
   {
     name: 'Sample 2',
-    image: ['/images/b.jpg', '/images/b.jpg'],
+    images: ['/uploads/b.jpg', '/uploads/b.jpg'],
     description:
       'Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life',
     brand: 'Apple',
@@ -27,7 +27,7 @@ const products = [
   },
   {
     name: 'Sample 3',
-    image: ['/images/c.jpg', '/images/c.jpg'],
+    images: ['/uploads/c.jpg', '/uploads/c.jpg'],
     description:
       'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
     brand: 'Cannon',
@@ -40,7 +40,7 @@ const products = [
   },
   {
     name: 'Sample 4',
-    image: ['/images/d.jpg', '/images/d.jpg'],
+    images: ['/uploads/d.jpg', '/uploads/d.jpg'],
     description:
       'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
     brand: 'Sony',
@@ -53,7 +53,7 @@ const products = [
   },
   {
     name: 'Sample 5',
-    image: ['/images/e.jpg', '/images/e.jpg'],
+    images: ['/uploads/e.jpg', '/uploads/e.jpg'],
     description:
       'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
     brand: 'Logitech',
@@ -66,7 +66,7 @@ const products = [
   },
   {
     name: 'Sample 6 Sample 6 Sample 6 Sample 6 Sample 6 Sample 6 Sample 6',
-    image: ['/images/f.jpg', '/images/f.jpg'],
+    images: ['/uploads/f.jpg', '/uploads/f.jpg'],
     description:
       'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
     brand: 'Amazon',
