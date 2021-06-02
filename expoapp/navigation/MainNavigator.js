@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 import MenuNavigator from './MenusNavigator.js'
 import AdminNavigator from './AdminNavigator'
+import tempscreen from '../screens/tempscreen.js';
 
 
 function CustomDrawerContent(props) {
@@ -36,6 +37,7 @@ export default function App() {
                 {userInfo && userInfo.isAdmin && (
                     <Drawer.Screen name="Admin" component={AdminNavigator} />
                 )}
+                <Drawer.Screen name="Temp" component={tempscreen} />
             </Drawer.Navigator>
         </NavigationContainer>
     );

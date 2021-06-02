@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import ImagePicker from 'react-native-image-picker';
 import { ScrollView, View, Text, TextInput, Button, ActivityIndicator, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
